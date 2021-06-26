@@ -1,0 +1,13 @@
+long repeatedString(string s, long n) {
+    long s_size = s.size();
+    long div2 = n / s_size;
+    long mod = n % s_size;
+    size_t t = count(s.begin(),s.end(),'a');
+    t *= div2;
+    for(int i=0;i<mod;++i){
+        if(s[i]=='a'){
+            t++;
+        }
+    }
+    return t;
+}

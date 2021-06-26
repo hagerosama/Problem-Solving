@@ -1,0 +1,18 @@
+int sockMerchant(int n, vector<int> ar) {
+    int sum = 0;  
+    map<int, int> mp;
+    map<int, int>::iterator it;
+    for(int i=0;i<n;++i){
+        it = mp.find(ar[i]);
+        if(it == mp.end()){
+            mp.insert({ar[i], 1});
+        }else{
+            it->second += 1;
+        }
+    }
+    
+    for(it=mp.begin();it!=mp.end();++it){
+        sum += ((it->second)/2);
+    }
+    return sum;
+}

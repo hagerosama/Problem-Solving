@@ -1,0 +1,8 @@
+vector<int> rotLeft(vector<int> a, int d) {
+    while(d!=0){
+        a.push_back(a[0]);
+        a.erase(a.begin());
+        d--;
+    }
+    return a;
+}
